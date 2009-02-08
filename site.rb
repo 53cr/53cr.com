@@ -4,16 +4,29 @@ rescue LoadError
 end
 require 'sinatra'
 
-get '/' do
-  haml :home
+helpers do
+
+  def path_is(path)
+    request.env["REQUEST_URI"].slice(0,path.size) == path
+  end
+  
 end
 
-get '/services' do
-  haml :services
+get '/sass/:stylesheet.css' do
+  header 'Content-Type' => 'text/css; charset=utf-8'
+  sass params[:stylesheet].to_sym
+end
+
+get '/' do
+  title = 'Home'
+  header = "My Header"
+  haml :home, :locals => {:title => title, :header => header}
 end
 
 get '/contact' do
-  haml :contact
+  title = "Contact Us"
+  header = "Contact"
+  haml :contact, :locals => {:title => title, :header => header}
 end
 
 post '/contact' do
@@ -21,5 +34,7 @@ post '/contact' do
 end
 
 get '/portfolio' do
-  haml :portfolio
+  title = "Portfolio"
+  header =" Portfolio"
+  haml :portfolio, :locals => {:title => title, :header => header}
 end

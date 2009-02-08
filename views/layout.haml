@@ -6,14 +6,14 @@
     %meta{ :name => "author", :content => "Chromium 53"}
     %meta{ :name => "description", :content => "Chromium 53 is a small Canadian web development company specializing in application development using Ruby on Rails." }
     %meta{ :name => "keywords", :content => "Chromium 53,Chromium,Web Development,Web Design,Rails,Ruby on Rails,Ruby,Burke Libbey,Stefan Penner,Manitoba,Winnipeg" }
-    %link{ :rel => "stylesheet", :href => "http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css", :type => "text/css", :media => "all" }
-    %link{ :rel => "stylesheet", :href => "/stylesheets/site.css", :type => "text/css", :media => "screen, projection" }
+    %link{ :rel => "stylesheet", :href => "/stylesheets/reset-fonts-grids.css", :type => "text/css", :media => "all" }
+    %link{ :rel => "stylesheet", :href => "/sass/style.css", :type => "text/css", :media => "screen, projection" }
     %link{ :rel => "shortcut icon", :type => "image/ico", :href => "/favicon.ico" }
     %script{ :type => "text/javascript", :src => "/javascripts/jquery.js" }
     %script{ :type => "text/javascript", :src => "/javascripts/jquery.dimensions.js" }
     %script{ :type => "text/javascript", :src => "/javascripts/jquery.tooltip.js" }
     %script{ :type => "text/javascript", :src => "/javascripts/site.js" }
-    %title= "Chromium 53" + (@title ? (' | '+@title) : '')
+    %title= "Chromium 53" + (title ? (' | '+title) : '')
   %body
     #doc
       #hd
@@ -22,12 +22,12 @@
             Chromium 53<span></span>
         %ul#navigation
           -# Don't wrap the <a...> to the next line. It messes up alignment.
-          %li{ :class => "#{(@dir == ''          ? 'active' : nil)}"} <a href="/" title="Front Page">Home</a>
-          %li{ :class => "#{(@dir == 'portfolio' ? 'active' : nil)}"} <a href="/portfolio" title="Our Previous Work">Portfolio</a>
-          %li{ :class => "#{(@dir == 'contact'   ? 'active' : nil)}"} <a href="/contact" title="Get In Touch">Contact</a>
-          %li <a href="/blog" title="Isotopical">Blog</a>
+          %li{ :class => ('active' if path_is('/'))} <a href="/" title="Front Page">Home</a>
+          %li{ :class => ('active' if path_is('/portfolio'))} <a href="/portfolio" title="Our Previous Work">Portfolio</a>
+          %li{ :class => ('active' if path_is('/contact'))} <a href="/contact" title="Get In Touch">Contact</a>
+          %li{ :class => ('active' if path_is('/blog'))} <a href="/blog" title="Isotopical">Blog</a>
         %br/
-        %h1#maintitle= @maintitle
+        %h1#maintitle= header
 
       #bd= yield
 
