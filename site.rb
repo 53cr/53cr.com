@@ -1,22 +1,10 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__),'lib')
 begin
 require 'rubygems'
 rescue LoadError
 end
 require 'sinatra'
-
-helpers do
-
-  def path_is(path)
-    actual_path = request.env["REQUEST_URI"]
-    (return false unless actual_path == path) if path == '/'
-    return actual_path.slice(0,path.size) == path
-  end
-  
-  def link_to(text,url)
-    "<a href='#{url}'>#{text}</a>"
-  end
-
-end
+require '53cr_helpers'
 
 get '/sass/:stylesheet.css' do
   header 'Content-Type' => 'text/css; charset=utf-8'
@@ -47,5 +35,14 @@ end
 
 # blog index
 get '/blog' do
-  "BLOG!"
+  title = "Isotopical"
+  header = "Isotopical"
+  haml :blog_index, :locals => {:title => title, :header => header}
+end
+
+get '/blog/:slug' do
+  title = "Isotopical"
+  header = "Blog!"
+  blog_content = haml params[:slug].to_sym, :layout => false
+  haml :blog, :locals => {:title => title, :header => header, :blog_content => blog_content}
 end
