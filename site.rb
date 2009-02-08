@@ -7,9 +7,15 @@ require 'sinatra'
 helpers do
 
   def path_is(path)
-    request.env["REQUEST_URI"].slice(0,path.size) == path
+    actual_path = request.env["REQUEST_URI"]
+    (return false unless actual_path == path) if path == '/'
+    return actual_path.slice(0,path.size) == path
   end
   
+  def link_to(text,url)
+    "<a href='#{url}'>#{text}</a>"
+  end
+
 end
 
 get '/sass/:stylesheet.css' do
@@ -37,4 +43,9 @@ get '/portfolio' do
   title = "Portfolio"
   header =" Portfolio"
   haml :portfolio, :locals => {:title => title, :header => header}
+end
+
+# blog index
+get '/blog' do
+  "BLOG!"
 end
