@@ -1,0 +1,36 @@
+!!!Strict
+
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :'xml:lang' => 'en', :lang => 'en-us' }
+  %head
+    %meta{ :'http-equiv' => "content-type", :content => "text/html; charset=utf-8" }
+    %meta{ :name => "author", :content => "Chromium 53"}
+    %meta{ :name => "description", :content => "Chromium 53 is a small Canadian web development company specializing in application development using Ruby on Rails." }
+    %meta{ :name => "keywords", :content => "Chromium 53,Chromium,Web Development,Web Design,Rails,Ruby on Rails,Ruby,Burke Libbey,Stefan Penner,Manitoba,Winnipeg" }
+    %link{ :rel => "stylesheet", :href => "http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css", :type => "text/css", :media => "all" }
+    %link{ :rel => "stylesheet", :href => "/stylesheets/site.css", :type => "text/css", :media => "screen, projection" }
+    %link{ :rel => "shortcut icon", :type => "image/ico", :href => "/favicon.ico" }
+    %script{ :type => "text/javascript", :src => "/javascripts/jquery.js" }
+    %script{ :type => "text/javascript", :src => "/javascripts/jquery.dimensions.js" }
+    %script{ :type => "text/javascript", :src => "/javascripts/jquery.tooltip.js" }
+    %script{ :type => "text/javascript", :src => "/javascripts/site.js" }
+    %title= "Chromium 53" + (@title ? (' | '+@title) : '')
+  %body
+    #doc
+      #hd
+        %h1#logo
+          %a{ :href => "http://53cr.com", :title => 'Chromium 53' }
+            Chromium 53<span></span>
+        %ul#navigation
+          -# Don't wrap the <a...> to the next line. It messes up alignment.
+          %li{ :class => "#{(@dir == ''          ? 'active' : nil)}"} <a href="/" title="Front Page">Home</a>
+          %li{ :class => "#{(@dir == 'portfolio' ? 'active' : nil)}"} <a href="/portfolio" title="Our Previous Work">Portfolio</a>
+          %li{ :class => "#{(@dir == 'contact'   ? 'active' : nil)}"} <a href="/contact" title="Get In Touch">Contact</a>
+          %li <a href="/blog" title="Isotopical">Blog</a>
+        %br/
+        %h1#maintitle= @maintitle
+
+      #bd= yield
+
+      #ft &copy; 2008 Chromium 53.
+
+      %script{ :src => "http://static.getclicky.com/72588.js", :type => "text/javascript" }
