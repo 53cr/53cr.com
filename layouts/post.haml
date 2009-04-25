@@ -1,0 +1,8 @@
+---
+extension: html
+filter:    haml
+layout: default
+---
+%h2= @page.title
+.date== Posted #{@page.created_at.strftime("%B %e, %G")}
+= @content

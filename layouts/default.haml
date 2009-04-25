@@ -1,0 +1,34 @@
+---
+extension: html
+filter:    haml
+---
+!!!Strict
+%html{ "xml:lang" => "en", :lang => "en-us", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
+    %meta{ :name => "author", :content => "Chromium 53" }
+    %meta{ :name => "description", :content => "Chromium 53 is a small Canadian web development company specializing in application development using Ruby on Rails." }
+    %title== Chromium 53 - #{@page.title}
+    %link{ :href => "/stylesheets/sass/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/site.js"></script>
+    <script type="text/javascript" src="/javascripts/cufon.js"></script>
+    <script type="text/javascript" src="/javascripts/Qlassik_Medium_500.font.js"></script>
+    <script type="text/javascript">//<![CDATA[
+    Cufon.replace('h2');
+    Cufon.replace('h3'); //]]>
+    </script>
+  %body{ :class => (body_class rescue nil) }
+    #header.wrapper
+      .container
+        <a href="/"><img src='/images/chromium.png' alt='Chromium 53'/></a>
+        %ul
+          %li.first <a href="/">Home</a>
+          %li       <a href="/work">Our Work</a>
+          %li       <a href="/labs">Labs</a>
+          %li       <a href="/blog">Blog</a>
+          %li.last  <a href="/contact">Contact</a>
+    = @content
+    <script type="text/javascript">//<![CDATA[
+    try {_gat._getTracker("UA-5149541-1")._trackPageview();} catch(err) {} //]]>
+    </script>

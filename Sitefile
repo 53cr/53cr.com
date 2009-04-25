@@ -1,0 +1,10 @@
+
+#SITE.user = 'burke'
+#SITE.host = 'og'
+#SITE.remote_dir = '/srv/http/53cr/53cr.com/htdocs'
+
+task :default => :build
+
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:ssh']
+
