@@ -1,0 +1,77 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+html {
+   background: black url("../images/background.png") top center no-repeat ;
+   height:100%;
+   color: #bebebe;
+   font-family: TimesNewRomanPSMT,sans-serif;
+   font-size: 14px;
+   line-height:20px;
+ }
+h1,h2,h3,h4,h5,h6{
+  padding: 1em 0;
+  color:white;
+}
+a { 
+  color: white;
+  text-decoration:none;
+}
+a:hover {
+  color:#ed4040;
+}
+.container{
+  width:60%;
+  min-width:800px;
+  max-width:950px;
+  margin:0 auto;
+}
+#header {
+  height: 150px;
+  padding-top: 5em;
+}
+#header h1 a {
+  float:left;
+  text-indent: -9999em;
+  background: url("../images/logo.png") no-repeat;
+  width:302px;
+  height:73px;
+}
+
+#menu {
+  float:right;
+}
+
+ul#menu {
+  list-style:none;
+}
+ul#menu li{
+  float:left;
+  padding:0 1em;
+  font-size: 16pt;
+}
+
+.current{
+  color: #ed4040;
+}
+.current:hover {
+  color: white;
+}
+.portfolio_entry img{
+  padding: 2em;
+}
+
