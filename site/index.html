@@ -29,14 +29,27 @@
         });
 
         portfolio_entries.children('a').toggle(function(){
-          var href = $(this).attr('href');
-          // fade out all the childrens 
-          if(href) { $(href).fadeIn(); }
-
-        },function(){
-          var href = $(this).attr('href');
-          if(href) { $(href).fadeOut(); }
-        });
+          var that = $(this);
+          var href = that.attr('href');
+          that.
+            parent().
+            siblings().
+            animate({opacity:0},'fast',function(){
+              if(href) { $(href).fadeIn(); }
+            });
+         
+        },function(){           
+          var that = $(this);
+          var href = that.attr('href');
+          if(href) { 
+            $(href).fadeOut(function(){
+              that.
+                parent().
+                siblings().
+                animate({opacity : 1},'fast');
+              });
+            }
+          });
       });
     </script>
   </head>
