@@ -12,20 +12,21 @@
     <script type="text/javascript" src="javascripts/Museo_700.font.js"></script>
     <script type="text/javascript">
       $(function(){
-          Cufon.replace("#menu li a", { hover : true}); 
+        Cufon.replace("#menu li a", { hover : true}); 
 
         var portfolio_entries = $(".portfolio_entry");
+        
         portfolio_entries.hover(function(){
-          $(this)
-            .siblings()
-            .stop()
-            .animate({ opacity : 0.3 });
+          $(this).
+            siblings().
+            stop().
+            animate({ opacity : 0.3 });
         },
         function(){
-          $(this)
-            .siblings()
-            .stop()
-            .animate({ opacity : 1 });
+          $(this).
+            siblings().
+            stop().
+            animate({ opacity : 1 });
         });
 
         portfolio_entries.children('a').toggle(function(){
@@ -41,15 +42,16 @@
         },function(){           
           var that = $(this);
           var href = that.attr('href');
-          if(href) { 
-            $(href).fadeOut(function(){
+         
+          var on = function(){
               that.
                 parent().
                 siblings().
                 animate({opacity : 1},'fast');
-              });
-            }
-          });
+              }
+
+          href ? $(href).fadeOut(on) : on() ;
+        });
       });
     </script>
   </head>
