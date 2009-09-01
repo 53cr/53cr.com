@@ -1,6 +1,6 @@
 task :default => [:deploy]
 
 task :deploy do
-  system "scp -r site/* og:/srv/http/stefan/static.iamstef.net/htdocs/53cr/"
+  system "scp -r site/* og:/srv/http/stefan/static.iamstef.net/htdocs/53cr2/"
 end
 
