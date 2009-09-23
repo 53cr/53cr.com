@@ -1,0 +1,170 @@
+---
+filter: sass
+extension: css
+layout: nil
+---
+
+@import compass/reset.sass
+
+body 
+  :font-family Helvetica, Arial, sans
+
+input, label
+  :display block
+
+section
+  :float left
+
+input.fancyinput
+  :height 24px
+
+textarea.fancyinput
+  :height 200px
+
+.fancyinput
+  :border 1px solid #666
+  :width 300px
+  :padding 4px
+  :line-height 24px
+  :font-size 18px
+
+section#contact 
+  .input
+    :width 300px
+  label
+    :font-style italic
+    :font-size 12px
+    :font-variant small-caps
+    :text-align right
+    :position relative
+    :top -18px
+    :right -5px
+
+
+html
+  overflow-y: scroll
+  background: black url(/i/background.png) top center no-repeat 
+  height: 100%
+  color: #bebebe
+  font-family: TimesNewRomanPSMT,sans-serif
+  font-size: 14px
+  line-height: 20px
+
+
+h1, h2, h3, h4, h5, h6
+  padding: 1em 0
+  color: white
+
+
+a
+  color: white
+  text-decoration: none
+
+  &:hover
+    color: #ed4040
+
+
+.container
+  width: 60%
+  min-width: 800px
+  max-width: 1000px
+  margin: 0 auto
+
+
+header
+  padding: 2em 0 2em 0
+  display: block
+  height: 100px
+
+  h1 a
+    float: left
+    text-indent: -9999em
+    background: url(/i/logo.png) no-repeat
+    width: 302px
+    height: 73px
+
+  nav
+    float: right
+
+    a
+      float: left
+      padding: 0 1em
+      font-size: 16pt
+
+
+.current
+  color: #ed4040
+
+  &:hover
+    color: white
+
+
+#portfolio article
+  a img
+    float: left
+    padding: 2em
+
+  .description
+    display: none
+
+
+#contact
+  article
+    width: 400px
+    display: block
+    height: 300px
+
+  .picture
+    float: left
+    margin: 0 2em 2em 0
+    background: white
+    width: 200px
+    padding: 10px
+    border: solid 1px #dbdbdb
+    float: left
+
+
+.icons a
+  text-indent: -999em
+  display: block
+  float: left
+  background: url(/i/icons.png)
+  height: 35px
+  width: 35px
+  margin: 0.5em
+
+  &.posterous
+    background-position: 0     0
+
+  &.twitter
+    background-position: -35px   0px
+
+  &.skype
+    background-position: -70px   0px
+
+  &.lastfm
+    background-position: -104px   0px
+
+  &.gmail
+    background-position: -139px   0px
+
+  &.ycombinator
+    background-position: -174px   0px
+
+  &.linkedin
+    background-position: 0px -35px
+
+  &.github
+    background-position: -35px -35px
+
+  &.facebook
+    background-position: -70px -35px
+
+  &.rss
+    background-position: -104px -35px
+
+  &.reddit
+    background-position: -139px -35px
+
+  &.pdf
+    background-position: -174px -35px

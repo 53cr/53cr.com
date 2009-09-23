@@ -1,0 +1,23 @@
+# -*- ruby -*-
+
+require 'lib/view_helpers'
+require 'compass'
+
+Compass.configuration do |config|
+  config.project_path = File.dirname(__FILE__)
+  config.sass_dir = File.join('src', 'stylesheets' )
+end
+
+Webby.site.sass_options.update(Compass.sass_engine_options)
+
+SITE.user = 'burke'
+SITE.host = 'og'
+#SITE.remote_dir = '/srv/http/burke/burkelibbey.org/htdocs'
+
+SITE.posts_dir = 'posts'
+
+task :default => :build
+
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:ssh']
+

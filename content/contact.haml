@@ -1,0 +1,42 @@
+---
+filter: haml
+extension: html
+title: Contact Us
+---
+%header
+  %h1 Contact Us
+
+%section#profiles
+  %article
+    %h2 Stefan Penner
+    %a{ :href => "http://github.com/stefanpenner" } Code
+    %a{ :href => "http://static.iamstef.net" } Blog
+    %a{ :href => "http://twitter.com/stefanpenner" } Twitter
+   
+  %article
+    %h2 Burke Libbey
+    %a{ :href => "http://github.com/burke" } Code
+    %a{ :href => "http://burkelibbey.posterous.com" } Blog
+    %a{ :href => "http://twitter.com/burkelibbey" } Twitter
+   
+  %article
+    %h2 Ryan Neufeld
+    %a{ :href => "http://github.com/rkneufeld" } Code
+    %a{ :href => "http://rkneufeld.posterous.com" } Blog
+    %a{ :href => "http://twitter.com/rkneufeld" } Twitter
+
+%section#contact
+  %form
+    .input
+      %input#name.fancyinput
+      %label{:for => "name"} Name
+    .input
+      %input#email.fancyinput
+      %label{:for => "email"} Email
+    .input
+      %textarea#message.fancyinput
+      %label{:for => "message"} Message
+    .input 
+      %input#robot.fancyinput
+      %label{:for => "robot"} Are you a Robot? (yes/no)
+    %input{:type => "submit"}

@@ -1,0 +1,35 @@
+---
+extension: html
+filter:    haml
+---
+<!DOCTYPE html>
+
+%title= @page.title
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<link rel="stylesheet" type="text/css" href="/s/style.css">
+/[if IE]
+  <link charset='utf-8' href='/s/ie.css' media='screen' rel='stylesheet' type='text/css' />
+
+<script src="/j/jquery-1.3.2.min.js"></script>
+<script src="/j/cufon-yui.js"></script>
+<script src="/j/Museo_700.font.js"></script>
+<script src="/j/application.js"></script>
+
+<script>(function(){var e=['header','footer','nav','article','section','aside'];for(var i=0;i<e.length;i++){document.createElement(e[i]);}})();</script>
+
+%header
+  %h1= link_to 'Chromium 53', 'http://53cr.com'
+  %nav
+    <a href="index.html" class="current">Portfolio</a>
+    <a href="#">Labs</a>
+    <a href="contact.html">Contact</a>
+
+= @content
+
+<script src="http://www.google-analytics.com/ga.js"></script>
+<script>try{_gat._getTracker("UA-5149541-1")._trackPageview();}catch(err){}</script>
+     
