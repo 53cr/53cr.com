@@ -8,11 +8,21 @@ layout: nil
 
 body 
   :font-family Helvetica, Arial, sans
+  margin: 0 auto
+  :width 800px
+  background: url(/i/background.png) top center no-repeat black
 
 input, label
   :display block
 
-section
+section#contact
+  :width 300px
+  :display block
+  :float left
+
+section#profiles
+  :width 499px
+  :display block
   :float left
 
 input.fancyinput
@@ -42,8 +52,8 @@ section#contact
 
 
 html
+  margin: 0 auto
   overflow-y: scroll
-  background: black url(/i/background.png) top center no-repeat 
   height: 100%
   color: #bebebe
   font-family: TimesNewRomanPSMT,sans-serif
@@ -65,16 +75,15 @@ a
 
 
 .container
-  width: 60%
-  min-width: 800px
-  max-width: 1000px
+  width: 800px
   margin: 0 auto
-
 
 header
   padding: 2em 0 2em 0
   display: block
-  height: 100px
+  margin: 0 auto
+  width: 800px
+  height: 120px
 
   h1 a
     float: left
