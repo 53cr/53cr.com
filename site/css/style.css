@@ -1,21 +1,34 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+html, body, div, span, a, img,
+h1, h2, h3, h4, h5, h6, hgroup, p,
+dl, dialog, dt, dd, ol, ul, li, 
+abbr, acronym, address, b, big, blockquote, 
+cite, code, del, dfn, em, i, ins, kbd, pre, q, 
+samp, tt, var, small, strong, sub, sup, 
+object, iframe, form, fieldset, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section,
+figure, menu, time, mark, audio, video{ 
+  font-family: inherit; 
+  font-size: 100%; 
+  font-weight: inherit; 
+  font-style: inherit; 
+  vertical-align: baseline; 
+  white-space: normal; 
+  text-align: left; 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  background: transparent; 
 }
+
+article, aside, footer, header, nav, section,
+dialog, figure, hgroup, menu { 
+  display: block; 
+}
+
 html {
+  overflow-y:scroll;
    background: black url("../images/background.png") top center no-repeat ;
    height:100%;
    color: #bebebe;
@@ -37,29 +50,26 @@ a:hover {
 .container{
   width:60%;
   min-width:800px;
-  max-width:950px;
+  max-width:1000px;
   margin:0 auto;
 }
-#header {
-  height: 150px;
-  padding-top: 5em;
+header {
+  padding: 2em 0 0 0;
+  display:block;
+  height:100px;
 }
-#header h1 a {
+header h1 a {
   float:left;
   text-indent: -9999em;
   background: url("../images/logo.png") no-repeat;
   width:302px;
   height:73px;
 }
-
-#menu {
+nav{
   float:right;
 }
 
-ul#menu {
-  list-style:none;
-}
-ul#menu li{
+nav a{
   float:left;
   padding:0 1em;
   font-size: 16pt;
@@ -71,7 +81,12 @@ ul#menu li{
 .current:hover {
   color: white;
 }
-.portfolio_entry img{
+
+#portfolio article a img{
+  float:left;
   padding: 2em;
+}
+#portfolio article .description {
+  display:none;
 }
 
