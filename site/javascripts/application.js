@@ -1,5 +1,5 @@
   $(function(){
-        Cufon.replace("nav a", { hover : true}); 
+        Cufon.replace("header nav a", { hover : true}); 
 
         var portfolio_entries = $("#portfolio article");
         

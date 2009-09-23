@@ -54,7 +54,7 @@ a:hover {
   margin:0 auto;
 }
 header {
-  padding: 2em 0 0 0;
+  padding: 2em 0 2em 0;
   display:block;
   height:100px;
 }
@@ -65,11 +65,11 @@ header h1 a {
   width:302px;
   height:73px;
 }
-nav{
+header nav{
   float:right;
 }
 
-nav a{
+header nav a{
   float:left;
   padding:0 1em;
   font-size: 16pt;
@@ -89,4 +89,45 @@ nav a{
 #portfolio article .description {
   display:none;
 }
+#contact article{
+  width:400px;
+  display:block;
+  height:300px;
+}
+#contact .picture{
+  float: left;
+  margin: 0 2em 2em 0;
+  background: white;
+  width:200px;
+  padding: 10px;
+  border: solid 1px #dbdbdb;
+  float: left; 
+}
+
+.icons a{
+  text-indent:-999em;
+  display:block;
+  float:left;
+  background: url(../images/icons.png);
+  height:35px;
+  width:35px;
+  margin:0.5em;
+}
+
+.icons a.posterous   { background-position:    0     0; }
+.icons a.twitter     { background-position:  -35px   0px; }
+.icons a.skype       { background-position:  -70px   0px; }
+.icons a.lastfm      { background-position: -104px   0px; }
+.icons a.gmail       { background-position: -139px   0px; }
+.icons a.ycombinator { background-position: -174px   0px; }
+.icons a.linkedin    { background-position:    0px -35px; }
+.icons a.github      { background-position:  -35px -35px; }
+.icons a.facebook    { background-position:  -70px -35px; }
+.icons a.rss         { background-position: -104px -35px; }
+.icons a.reddit      { background-position: -139px -35px; }
+.icons a.pdf         { background-position: -174px -35px;}
+
+
+
+
 
