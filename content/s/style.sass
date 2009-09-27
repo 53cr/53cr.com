@@ -8,9 +8,12 @@ layout: nil
 
 body 
   :font-family Helvetica, Arial, sans
-  margin: 0 auto
-  :width 800px
-  background: url(/i/background.png) top center no-repeat black
+  :margin 0 auto
+  :min-width 800px
+  :max-width 900px
+  :width 70%
+  :-width 700px
+  :background url(/i/background.png) top center no-repeat black
 
 input, label
   :display block
@@ -43,19 +46,20 @@ section#contact
     :width 300px
   label
     :font-style italic
-    :font-size 12px
+    :font-size 16px
     :font-variant small-caps
     :text-align right
     :position relative
     :top -18px
-    :right -5px
+    :right 1px
+    :color #909090
 
 
 html
   margin: 0 auto
   overflow-y: scroll
   height: 100%
-  color: #bebebe
+  color: white
   font-family: TimesNewRomanPSMT,sans-serif
   font-size: 14px
   line-height: 20px
@@ -82,9 +86,7 @@ header
   padding: 2em 0 2em 0
   display: block
   margin: 0 auto
-  width: 800px
   height: 120px
-
   h1 a
     float: left
     text-indent: -9999em
@@ -112,16 +114,16 @@ header
   a img
     float: left
     padding: 2em
-
+  
   .description
     display: none
+    color: #BEBEBE
 
-
-#contact
+#profiles
   article
     width: 400px
     display: block
-    height: 300px
+    height: 100px
 
   .picture
     float: left
@@ -133,7 +135,7 @@ header
     float: left
 
 
-.icons a
+nav.icons a
   text-indent: -999em
   display: block
   float: left
