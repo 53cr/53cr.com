@@ -1,43 +1,43 @@
 $(function(){
-        Cufon.replace("header nav a", { hover : true});
+  Cufon.replace("header nav a", { hover : true});
 
-        var portfolio_entries = $("#portfolio article");
+  var portfolio_entries = $("#portfolio article");
 
-        portfolio_entries.hover(function(){
-          $(this).
-            siblings().
-            stop().
-            animate({ opacity : 0.3 });
-        },
-        function(){
-          $(this).
-            siblings().
-            stop().
-            animate({ opacity : 1 });
-        });
+  portfolio_entries.hover(function(){
+    $(this).
+      siblings().
+      stop().
+      animate({ opacity : 0.3 });
+  },
+  function(){
+    $(this).
+      siblings().
+      stop().
+      animate({ opacity : 1 });
+  });
 
-        portfolio_entries.children('a').toggle(function(){
-          var that = $(this);
-          var href = that.attr('href');
-          that.
-            parent().
-            siblings().
-            animate({opacity:0},'fast',function(){
-              if(href) { $(href).fadeIn(); }
-            });
+  portfolio_entries.children('a').toggle(function(){
+    var that = $(this),
+        href = that.attr('href');
 
-        },function(){
-          var that = $(this);
-          var href = that.attr('href');
+    that.
+      parent().
+      siblings().
+      animate({opacity:0},'fast',function(){
+        if(href) { $(href).fadeIn(); }
+  });
 
-          var on = function(){
-              that.
-                parent().
-                siblings().
-                animate({opacity : 1},'fast');
-              }
+  },function(){
+    var that = $(this),
+        href = that.attr('href'),
+        on = function(){
+      that.
+        parent().
+        siblings().
+        animate({opacity : 1},'fast');
+    }
 
-          href ? $(href).fadeOut(on) : on() ;
-        });
-      });
+    href ? $(href).fadeOut(on) : on() ;
+  });
+});
 
