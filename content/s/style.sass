@@ -7,58 +7,57 @@ layout: nil
 @import compass/reset.sass
 
 body 
-  :font-family "HelveticaNeue-Light", Helvetica, Arial, sans
-  :margin 0 auto
-  :font-size 14px
-  :line-height 21px
-  :min-width 800px
-  :max-width 900px
-  :width 70%
-  :-width 800px
-  :background url(/i/background.png) top center no-repeat black
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans
+  margin: 0 auto
+  font-size: 14px
+  line-height: 21px
+  min-width: 800px
+  max-width: 900px
+  width: 70%
+  -width: 800px
+  background: url(/i/background.png) top center no-repeat black
 
 input, label
-  :display block
+  display: block
 
 section#contact
-  :width 300px
-  :display block
-  :float right
+  width: 300px
+  display: block
+  float: right
 
 section#profiles
-  :width 499px
-  :display block
-  :float left
+  width: 499px
+  display: block
+  float: left
 
 input
-  :height 24px
+  height: 24px
 
 textarea
-  :height 200px
+  height: 200px
 
 input, textarea
-  :border 0px solid #666
-  :width 300px
-  :padding 4px
-  :line-height 24px
-  :font-size 18px
-  :border-radius 3px
-  :-moz-border-radius 3px
-  :-webkit-border-radius 3px
+  border: 0px solid #666
+  width: 300px
+  padding: 4px
+  line-height: 24px
+  font-size: 18px
+  border-radius: 3px
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
 
 section#contact 
   .input
-    :width 300px
+    width: 300px
   label
-    :font-style italic
-    :font-size 16px
-    :font-variant small-caps
-    :text-align right
-    :position relative
-    :top -24px
-    :right 1px
-    :color #909090
-
+    font-style: italic
+    font-size: 16px
+    font-variant: small-caps
+    text-align: right
+    position: relative
+    top: -24px
+    right: 1px
+    color: #909090
 
 html
   margin: 0 auto
@@ -67,18 +66,19 @@ html
   color: white
 
 h1, h2, h3, h4, h5, h6
-  :font-weight bold
+  font-weight: bold
   padding: 1em 0
   color: white
+  font-variant: small-caps
 
-
+h2
+  font-size: 18px
 a
   color: white
   text-decoration: none
 
   &:hover
     color: #ed4040
-
 
 .container
   width: 800px
@@ -98,19 +98,16 @@ header
 
   nav
     float: right
-
     a
       float: left
       padding: 0 1em
       font-size: 16pt
-
 
 .current
   color: #ed4040
 
   &:hover
     color: white
-
 
 #portfolio article
   a img
