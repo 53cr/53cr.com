@@ -6,83 +6,72 @@ layout: nil
 
 @import compass/reset.sass
 
-body 
-  :font-family "HelveticaNeue-Light", Helvetica, Arial, sans
-  :margin 0 auto
-  :font-size 14px
-  :line-height 21px
-  :min-width 800px
-  :max-width 900px
-  :width 70%
-  :-width 800px
-  :background url(/i/background.png) top center no-repeat black
-
-input, label
-  :display block
-
-section#contact
-  :width 300px
-  :display block
-  :float right
-
-section#profiles
-  :width 499px
-  :display block
-  :float left
-
-input
-  :height 24px
-
-textarea
-  :height 200px
-
-input, textarea
-  :border 0px solid #666
-  :width 300px
-  :padding 4px
-  :line-height 24px
-  :font-size 18px
-  :border-radius 3px
-  :-moz-border-radius 3px
-  :-webkit-border-radius 3px
-
-section#contact 
-  .input
-    :width 300px
-  label
-    :font-style italic
-    :font-size 16px
-    :font-variant small-caps
-    :text-align right
-    :position relative
-    :top -18px
-    :right 1px
-    :color #909090
-
+=border-radius(!radius)
+  border-radius = !radius
+  -moz-border-radius = !radius
+  -webkit-border-radius = !radius
 
 html
   margin: 0 auto
-  overflow-y: scroll
-  height: 100%
   color: white
+
+body 
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans
+  margin: 0 auto
+  font-size: 14px
+  line-height: 21px
+  width: 800px
+  background: url(/i/background.png) top center no-repeat black
+
+input
+  height: 24px
+  display: block
+
+label
+  height: 24px
+
+textarea
+  height: 200px
+
+input, textarea
+  border: 0px solid #666
+  width: 300px
+  padding: 4px
+  line-height: 24px
+  font-size: 18px
+  +border-radius(3px)
+
+#profiles
+  width: 499px
+  display: block
+  float: left
+
+#contact 
+  width: 300px
+  display: block
+  float: right
+  .input
+    width: 300px
+  label
+    font-style: italic
+    font-size: 16px
+    font-variant: small-caps
+    text-align: right
+    position: relative
+    top: -18px
+    right: 1px
+    color: #909090
 
 h1, h2, h3, h4, h5, h6
-  :font-weight bold
+  font-weight: bold
   padding: 1em 0
   color: white
-
 
 a
   color: white
   text-decoration: none
-
   &:hover
     color: #ed4040
-
-
-.container
-  width: 800px
-  margin: 0 auto
 
 header
   padding: 2em 0 2em 0
@@ -95,28 +84,22 @@ header
     background: url(/i/logo.png) no-repeat
     width: 302px
     height: 73px
-
   nav
     float: right
-
     a
       float: left
       padding: 0 1em
       font-size: 16pt
 
-
 .current
   color: #ed4040
-
   &:hover
     color: white
-
 
 #portfolio article
   a img
     float: left
     padding: 2em
-  
   .description
     display: none
     color: #BEBEBE
@@ -127,7 +110,6 @@ header
     float: left
     display: block
     height: 400px
-
   .picture
     float: left
     margin: 0 2em 2em 0
@@ -145,39 +127,27 @@ nav.icons a
   height: 55px
   width: 52px
   margin: 0.5em
-
   &.posterous
-    background-position: -220px  0
-
+    background-position: -220px 0px
   &.twitter
-    background-position: -438px   0px
-
+    background-position: -438px 0px
   &.skype
-    background-position: -385px   0px
-
+    background-position: -385px 0px
   &.lastfm
-    background-position: -55px   0px
-
+    background-position: -55px  0px
   &.gmail
-    background-position: -139px   0px
-
+    background-position: -139px 0px
   &.ycombinator
-    background-position: -493px   0px
-
+    background-position: -493px 0px
   &.linkedin
     background-position: -110px 0px
-
   &.github
-    background-position: 0px 0px
-
+    background-position:  0px   0px
   &.facebook
     background-position: -548px 0px
-
   &.rss
-    background-position: -330px 0
-
+    background-position: -330px 0px
   &.reddit
-    background-position: -275px 0
-
+    background-position: -275px 0px
   &.pdf
-    background-position: -165px 0
+    background-position: -165px 0px
