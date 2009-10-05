@@ -10,11 +10,9 @@ end
 
 Webby.site.sass_options.update(Compass.sass_engine_options)
 
-SITE.user = 'burke'
+SITE.user = 'stefan'
 SITE.host = 'og'
-#SITE.remote_dir = '/srv/http/burke/burkelibbey.org/htdocs'
-
-SITE.posts_dir = 'posts'
+SITE.remote_dir = '/srv/http/stefan/static.iamstef.net/htdocs/'
 
 task :default => :build
 
