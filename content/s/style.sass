@@ -11,6 +11,18 @@ layout: nil
   -moz-border-radius = !radius
   -webkit-border-radius = !radius
 
+
+@font-face 
+  font-family: 'HelveticaNeue-Light'
+  src: url('HelveticaNeueLTStd-Roman.eot')
+  src: local('HelveticaNeue-Light'), local('Helvetica Neue LT Std 55 Roman'), local('HelveticaNeueLTStd-Roman'), url('HelveticaNeueLTStd-Roman.otf') format('opentype')
+
+
+@font-face 	
+  font-family: 'Museo500'
+  src: url('Museo500-Regular.eot')
+  src: local('Museo 500'), local('Museo-500'), url('Museo500-Regular.otf') format('opentype')
+
 html
   margin: 0 auto
   color: white
@@ -19,8 +31,11 @@ body
   font-family: "HelveticaNeue-Light", Helvetica, Arial, sans
   margin: 0 auto
   font-size: 14px
+  
   line-height: 21px
-  width: 800px
+  width: 80%  
+  min-width: 820px
+  max-width: 1024px
   background: url(/i/background.png) top center no-repeat black
 
 input
@@ -35,19 +50,19 @@ textarea
 
 input, textarea
   border: 0px solid #666
-  width: 300px
+  min-width: 300px
   padding: 4px
   line-height: 24px
   font-size: 18px
   +border-radius(3px)
 
 #profiles
-  width: 499px
+  width: 55%
   display: block
   float: left
 
 #contact 
-  width: 300px
+  width: 40%
   display: block
   float: right
   .input
@@ -63,31 +78,23 @@ input, textarea
     color: #909090
 
 h1, h2, h3, h4, h5, h6
-<<<<<<< HEAD:content/s/style.sass
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans  
   font-weight: bold
-  padding: 1em 0
-  color: white
-
-=======
   padding: 1em 0
   color: white
 
 h2
   font-size: 18px
->>>>>>> 062e9a29afde71fd76f8fc6a8490b01bd83e9fc5:content/s/style.sass
 a
   color: white
   text-decoration: none
   &:hover
     color: #ed4040
 
-<<<<<<< HEAD:content/s/style.sass
-=======
 .container
   width: 800px
   margin: 0 auto
 
->>>>>>> 062e9a29afde71fd76f8fc6a8490b01bd83e9fc5:content/s/style.sass
 header
   padding: 2em 0 2em 0
   display: block
@@ -103,7 +110,9 @@ header
     float: right
     a
       float: left
+      font-family: 'Museo500'
       padding: 0 1em
+      letter-spacing: 1px
       font-size: 16pt
 
 .current
